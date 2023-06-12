@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import css from '../Contact/Contact.module.css'
+import css from '../Contact/Contact.module.css';
+
 export default function Contact(props) {
     const { id, name, number, onDeleteContacts} = props;
     return (<li className={css.item}> {name}: {number}
