@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
-import css from '../ContactList/ContactList.module.css'
 import { contactsSelector, filterSelector } from "redux/selector";
 import Contact from "components/Contact/Contact";
+import PropTypes from 'prop-types';
+import css from '../ContactList/ContactList.module.css'
 
 export default function ContactList() {
   const filtered = useSelector(filterSelector)
@@ -17,4 +18,8 @@ export default function ContactList() {
            </ul>)
 }
 
-
+ContactList.propTypes = {
+    name: PropTypes.string,
+    number: PropTypes.string,
+    id: PropTypes.string,
+  }
